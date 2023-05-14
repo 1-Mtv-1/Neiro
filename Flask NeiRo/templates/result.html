@@ -1,0 +1,16 @@
+<html lan="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Human detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type = "text/css">
+</head>
+    <body style="background: whitesmoke;">
+        <h1>Результат нейросети:</h1>
+        <img src="/static/image.jpg">
+        {% if result %}
+            <p>Нейросеть уверена на {{ result*100 }}%, что на фото есть человек!</p>
+        {% endif %}
+        <p></p>
+        <a href="http://127.0.0.1:8080/home">Назад</a>
+    </body>
+</html>

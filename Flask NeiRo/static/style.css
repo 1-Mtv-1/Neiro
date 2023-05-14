@@ -1,0 +1,28 @@
+p {
+    font-size: 16px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #4498f8;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+h1 {
+    font-size: 32px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #503ef5;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+h3 {
+    font-size: 24px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #2894f8;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+body {
+    background-color: #f2f2f2;
+}

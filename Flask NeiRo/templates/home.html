@@ -1,0 +1,32 @@
+<html lan="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Human detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type = "text/css">
+</head>
+    <body style="background: whitesmoke;">
+        <h1>Добро пожаловать на сайт!</h1>
+        <h3>Отправь фото, и нейросеть найдет на нем людей.</h3>
+        <p>Выбери режим распознавания ( текущий режим: {{ mode }} ):</p>
+        <form action="" method='POST'>
+            <select name="mode" id="mode">
+                <option value="1">1] Полное сканирование (распознаёт несколько людей)</option>
+                <option value="2">2] Одиночный режим (распознает только лицо)</option>
+            </select>
+            <input type="submit" value="Подтвердить">
+        </form>
+
+        <form enctype=multipart/form-data method="POST">
+            <p>Выберите изображение: </p>
+
+            <p><input type="file" name="photo" multiple accept="image/*">
+
+            <input type="submit" value="Сканировать"></p>
+        
+        </form>
+
+        {% if result == 'True' %}
+            <a href="http://127.0.0.1:8080/result">Посмотреть результат нейросети</a>
+        {% endif %}
+    </body>
+</html>
